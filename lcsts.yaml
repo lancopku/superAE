@@ -1,0 +1,24 @@
+data: '/home/mashuming/data/summarization/lcsts/lcsts.low.share.train.pt'
+log: 'data/lcsts/'
+epoch: 10
+batch_size: 64
+param_init: 0.1
+optim: 'adam'
+learning_rate: 0.001
+max_grad_norm: 5
+learning_rate_decay: 0.1
+start_decay_at: 4
+emb_size: 512
+hidden_size: 512
+num_layers: 1
+enc_num_layers: 2
+bidirectional: True
+dropout: 0.0
+max_tgt_len: 50
+eval_interval: 10000
+save_interval: 3000
+max_generator_batches: 64
+metric: ['rouge']
+shared_vocab: True
+att_act : 'tanh'
+beam_size: 5
